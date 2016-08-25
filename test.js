@@ -25,7 +25,8 @@ el1.style.fontFamily = 'Hack';
 el1.innerHTML = `addFont(//cdn.jsdelivr.net/font-hack/2.020/css/hack.min.css');`;
 
 //Font URL w/o extension inserts eot, woff2, woff, ttf, svg and otf versions
-addFont('https://cdnjs.cloudflare.com/ajax/libs/css-social-buttons/1.2.0/css/zocial', `font-family: zocial; font-weight: normal;`);
+addFont('https://cdnjs.cloudflare.com/ajax/libs/css-social-buttons/1.2.0/css/zocial',
+	`font-family: zocial; font-weight: normal;`);
 let el2 = document.body.appendChild(document.createElement('div'));
 el2.style.fontFamily = 'zocial';
 let str = ''; for (let i = 0; i < 103; i++) {

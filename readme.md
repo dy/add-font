@@ -22,12 +22,12 @@ addFont(myFont.toArrayBuffer(), `font-weight: bold; font-family: my-font-${id};`
 
 ## API
 
-**`addFont(cssUrl)`**
-**`addFont(fontUrl, cssString|fontName)`**
-**`addFont(fontUrlList, cssString|fontName)`**
+**`addFont(cssUrl)`**<br/>
+**`addFont(fontUrl, cssString|fontName)`**<br/>
+**`addFont(fontUrlList, cssString|fontName)`**<br/>
 **`addFont(arrayBuffer, cssString|fontName)`**
 
-Attach font to the page, register based on additional parameters, which are whether font name or `@font-face` properties, like `font-family: <x>; font-style: <y>; font-weight: <z>`.
+Attach font to the page, apply additional parameters, which are whether font name or `@font-face` properties, eg `font-family: <x>; font-style: <y>; font-weight: <z>`.
 
 ## Related
 
