@@ -32,8 +32,9 @@ Attach font to the page, apply additional parameters, which are whether font nam
 
 ## Motivation
 
-The package is here mostly to save arrayBuffer font code snippet.
-It is useful for font-related tests or in theory for font design tools.
+The package is created for [wavefont](https://github.com/dfcreative/wavefont) test.
+It is here mostly to save arrayBuffer font code snippet.
+It may be useful for font-related tests or in theory for font design tools.
 For regular sites for css fonts just insert `<link>`, for specific font use `insert-styles` with `@font-face`.
 
 ## Related
