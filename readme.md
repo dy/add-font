@@ -32,8 +32,9 @@ Attach font to the page, apply additional parameters, which are whether font nam
 
 ## Motivation
 
-Honestly I am not sure this repo is too much demanded, it is here mostly to save code snippet for setting font from array buffer, therefore might be useful for font design tools, like [pluminjs](https://github.com/byte-foundry/plumin.js/) etc., though they use own method for that.
-For regular sites if you need css - just insert `<link>`, need specific font - use `insert-styles` with `@font-face`.
+The package is here mostly to save arrayBuffer font code snippet.
+It is useful for font-related tests or in theory for font design tools.
+For regular sites for css fonts just insert `<link>`, for specific font use `insert-styles` with `@font-face`.
 
 ## Related
 
