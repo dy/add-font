@@ -93,16 +93,20 @@ function addFont (src, desc) {
 //FIXME: register proper style/weight here
 function addFromBuffer (buffer, desc) {
 	let name = getFamily(desc);
+	let id = [name, getStyle(desc), getWeight(desc)].join('-');
 
 	//new style
 	if (document.fonts) {
-		if ( fontMap[name] ) {
-			document.fonts.delete( fontMap[name] );
+		if ( fontMap[id] ) {
+			document.fonts.delete( fontMap[id] );
 		}
 
-		let fontFace = fontMap[name] = new window.FontFace(name, buffer);
+		let fontFace = fontMap[id] = new window.FontFace(name, buffer, {
+			style: getStyle(desc),
+			weight: getWeight(desc)
+		});
 
-		if ( fontface.status === 'error' ) {
+		if ( fontFace.status === 'error' ) {
 			throw new Error('Fontface is invalid and cannot be displayed');
 		}
 
@@ -116,18 +120,19 @@ function addFromBuffer (buffer, desc) {
 			{ type: 'font/opentype' }
 		));
 
-		if ( fontMap[name] ) {
-			_URL.revokeObjectURL( fontMap[name] );
+		if ( fontMap[id] ) {
+			_URL.revokeObjectURL( fontMap[id] );
 		}
 
 		style(`
 		@font-face {
 			font-family: "${name}";
 			src: url(${url});
+			${desc};
 		}
-		`, { id: name });
+		`, { id: id });
 
-		fontMap[name] = url;
+		fontMap[id] = url;
 	}
 }
 
