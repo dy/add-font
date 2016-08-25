@@ -11,7 +11,8 @@ const addFont = require('add-font');
 addFont('//cdn.jsdelivr.net/font-hack/2.020/css/hack.min.css');
 
 //Font URL w/o extension inserts eot, woff2, woff, ttf, svg and otf versions
-addFont('//cdn.jsdelivr.net/font-hack/2.020/fonts/eot/latin/hack-regular-latin-webfont', `font-family: Hack; font-weight: normal;`);
+addFont('//cdn.jsdelivr.net/font-hack/2.020/fonts/eot/latin/hack-regular-latin-webfont',
+	`font-family: Hack; font-weight: normal;`);
 
 //Font URL with extension inserts only target font file
 addFont('./wavefont.otf', 'wavefont');
