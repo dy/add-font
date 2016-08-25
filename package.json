@@ -1,6 +1,6 @@
 {
   "name": "add-font",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Register font by url or as arrayBuffer",
   "main": "index.js",
   "scripts": {
