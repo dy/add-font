@@ -32,5 +32,5 @@ Attach font to the page, apply additional parameters, which are whether font nam
 
 ## Related
 
-* [google-fonts](https://github.com/hughsk/google-fonts) — attach google fonts by name.
+* [google-fonts](https://github.com/hughsk/google-fonts) — easy-peasy google fonts by name.
 * [webfontloader](https://github.com/typekit/webfontloader) — solution for all possible font include cases.
