@@ -44,7 +44,7 @@ function addFont (src, desc) {
 	}
 
 
-	name = getFamilyName(desc);
+	name = getFamily(desc);
 
 	//url case
 	let urls = [];
@@ -78,19 +78,21 @@ function addFont (src, desc) {
 	}
 	srcStr = srcStr.trim().slice(0, -1);
 
+	let id = [name, getStyle(desc), getWeight(desc)].join('-');
 	style(`
 	@font-face {
 		font-family: "${name}";
 		${srcStr};
 		${desc}
 	}
-	`, { id: name });
+	`, { id: id });
 }
 
 
 //buffer method
+//FIXME: register proper style/weight here
 function addFromBuffer (buffer, desc) {
-	let name = getFamilyName(desc);
+	let name = getFamily(desc);
 
 	//new style
 	if (document.fonts) {
@@ -130,8 +132,22 @@ function addFromBuffer (buffer, desc) {
 }
 
 //get font name from string
-function getFamilyName (cssString) {
+function getFamily (cssString) {
 	if (!/:/.test(cssString)) return cssString;
-	return /font(?:-family)?\s*:\s*"?([^;,"']*)"?/ig.exec(cssString)[1] || cssString;
+	let res = /font(?:-family)?\s*:\s*"?([^;,"']*)"?/ig.exec(cssString);
+	if (!res || !res[1]) return cssString;
+	return res[1];
+}
+function getStyle (cssString) {
+	if (!/:/.test(cssString)) return 'normal';
+	let res = /font-style\s*:\s*"?([^;,"']*)"?/ig.exec(cssString);
+	if (!res || !res[1]) return 'normal';
+	return res[1];
+}
+function getWeight (cssString) {
+	if (!/:/.test(cssString)) return 'normal';
+	let res = /font-weight\s*:\s*"?([^;,"']*)"?/ig.exec(cssString);
+	if (!res || !res[1]) return 'normal';
+	return res[1];
 }
 
