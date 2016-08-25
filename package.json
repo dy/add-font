@@ -1,0 +1,35 @@
+{
+  "name": "add-font",
+  "version": "1.0.0",
+  "description": "Register font by url or as arrayBuffer",
+  "main": "index.js",
+  "scripts": {
+    "test": "budo test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dfcreative/add-font.git"
+  },
+  "keywords": [
+    "font",
+    "css",
+    "stylesheets",
+    "font-face",
+    "google-fonts",
+    "webfontloader"
+  ],
+  "author": "ΔY <dfcreative@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/dfcreative/add-font/issues"
+  },
+  "homepage": "https://github.com/dfcreative/add-font#readme",
+  "dependencies": {
+    "get-ext": "^1.0.0",
+    "insert-styles": "^1.2.1",
+    "is-url": "^1.2.2"
+  },
+  "devDependencies": {
+    "enable-mobile": "^1.0.4"
+  }
+}
