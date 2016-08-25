@@ -30,6 +30,11 @@ addFont(myFont.toArrayBuffer(), `font-weight: bold; font-family: my-font-${id};`
 
 Attach font to the page, apply additional parameters, which are whether font name or `@font-face` properties, eg `font-family: <x>; font-style: <y>; font-weight: <z>`.
 
+## Motivation
+
+Honestly I am not sure this repo is too much demanded, it is here mostly to save code snippet for setting font from array buffer, therefore might be useful for font design tools, like [pluminjs](https://github.com/byte-foundry/plumin.js/) etc., though they use own method for that.
+For regular sites if you need css - just insert `<link>`, need specific font - use `insert-styles` with `@font-face`.
+
 ## Related
 
 * [google-fonts](https://github.com/hughsk/google-fonts) — easy-peasy google fonts by name.
