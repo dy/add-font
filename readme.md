@@ -1,5 +1,7 @@
 # add-font [![unstable](http://badges.github.io/stability-badges/dist/unstable.svg)](http://github.com/badges/stability-badges)
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/dfcreative/add-font.svg)](https://greenkeeper.io/)
+
 Register new font-face for the current web page by URL or from ArrayBuffer.
 
 [![npm install add-font](https://nodei.co/npm/add-font.png?mini=true)](https://npmjs.org/package/add-font/)
